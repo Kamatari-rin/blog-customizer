@@ -84,9 +84,9 @@
 		"yarn": "^1.22.22"
 	},
 	"lint-staged": {
-		"*.{css,scss}": "yarn stylelint:fix",
-		"*.{js,jsx,ts,tsx}": "yarn lint-staged",
-		"*.{js,jsx,ts,tsx,json,css,scss,md}": "yarn format"
+		"*.{css,scss}": "npm run stylelint:fix",
+		"*.{js,jsx,ts,tsx}": "npm run lint-staged",
+		"*.{js,jsx,ts,tsx,json,css,scss,md}": "npm run format"
 	},
 	"config": {
 		"commitizen": {
