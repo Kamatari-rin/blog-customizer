@@ -64,6 +64,7 @@
 		"stylelint": "stylelint \"src/**/*.scss\"",
 		"stylelint:fix": "stylelint \"src/**/*.scss\" --fix",
 		"lint": "eslint --fix \"./src/**/*.{js,jsx,ts,tsx,json}\"",
+		"lint-staged": "eslint --fix",
 		"format": "prettier --write \"./src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\" --ignore-path ./.prettierignore",
 		"test": "npm run stylelint:fix && npm run lint && npm run format",
 		"prepare": "husky install",
@@ -79,12 +80,13 @@
 	"dependencies": {
 		"clsx": "^2.1.0",
 		"react": "^18.2.0",
-		"react-dom": "^18.2.0"
+		"react-dom": "^18.2.0",
+		"yarn": "^1.22.22"
 	},
 	"lint-staged": {
-		"*.{css,scss}": "yarn stylelint:fix",
-		"*.{js,jsx,ts,tsx}": "yarn lint",
-		"*.{js,jsx,ts,tsx,json,css,scss,md}": "yarn format"
+		"*.{css,scss}": "npm run stylelint:fix",
+		"*.{js,jsx,ts,tsx}": "npm run lint-staged",
+		"*.{js,jsx,ts,tsx,json,css,scss,md}": "npm run format"
 	},
 	"config": {
 		"commitizen": {
